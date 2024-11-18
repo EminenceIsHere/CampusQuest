@@ -1,74 +1,58 @@
 package com.user.model;
 
 public class User {
-	
-	private int id;
-	private String uname;
-	private String email;
-	private long year;
-	private String passwd;
-	
-	public User() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+    
+    private String clgID;   // Unique college ID
+    private String role;    // Role can be 'admin' or 'student'
+    private String password; // User's password
+    private String profileImage; // Optional profile image URL or path
+    
+    public User() {
+        super();
+    }
 
-	public User(int id, String uname, String email, long year, String passwd) {
-		super();
-		this.id = id;
-		this.uname = uname;
-		this.email = email;
-		this.year = year;
-		this.passwd = passwd;
-	}
+    public User(String clgID, String role, String password, String profileImage) {
+        this.clgID = clgID;
+        this.role = role;
+        this.password = password;
+        this.profileImage = profileImage;
+    }
 
-	public int getId() {
-		return id;
-	}
+    // Getters and setters
+    public String getClgID() {
+        return clgID;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setClgID(String clgID) {
+        this.clgID = clgID;
+    }
 
-	public String getName() {
-		return uname;
-	}
+    public String getRole() {
+        return role;
+    }
 
-	public void setName(String uname) {
-		this.uname = uname;
-	}
+    public void setRole(String role) {
+        this.role = role;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	public long getYear() {
-		return year;
-	}
+    public String getProfileImage() {
+        return profileImage;
+    }
 
-	public void setYear(long l) {
-		this.year = l;
-	}
+    public void setProfileImage(String profileImage) {
+        this.profileImage = profileImage;
+    }
 
-	public String getPasswd() {
-		return passwd;
-	}
-
-	public void setPasswd(String passwd) {
-		this.passwd = passwd;
-	}
-
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", uname=" + uname + ", email=" + email + ", year=" + year + ", passwd=" + passwd
-				+ "]";
-	}
-	
-	
-	
-
+    @Override
+    public String toString() {
+        return "User [clgID=" + clgID + ", role=" + role + ", password=" + password + ", profileImage=" + profileImage + "]";
+    }
 }
